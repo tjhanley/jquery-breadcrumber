@@ -1,0 +1,72 @@
+<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+ <head>
+ 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+ 	<title>breadcrumb</title>
+ <script src="http://code.jquery.com/jquery.js" type="text/javascript" charset="utf-8"></script>
+ <script src="jquery-breadcrumber.js" type="text/javascript" charset="utf-8"></script> 	
+ </head>
+
+
+<style>
+#breadcrumb-container{
+	/* just a sample container...*/
+	width:800;
+	border:solid thin silver;
+}
+
+
+.breadcrumb{
+	margin:0;
+	padding:0 0 20px 0px;
+}
+.breadcrumb li{
+	margin:0;
+	margin-left:2;
+	padding-left:2;
+	list-style:none;
+	float:left;
+}
+.obscured {
+	width:5%;
+	white-space: nowrap;
+	overflow: hidden;
+	color:silver;
+}
+.breadcrumb-normal {
+	
+}
+a {
+	text-decoration: none;
+	color:green;
+}
+.obscured a{
+	color:silver;
+}
+</style>
+
+<script type="text/javascript" charset="utf-8">
+  $(function(){                       
+		$('.breadcrumb li').breadcrumber();
+	});
+</script>
+ 
+<body onload="">
+	<div id="breadcrumb-container">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li>&raquo; <a href="#">Windows</a></li>
+			<li>&raquo; <a href="#">Windows Vista Home Basic</a></li>
+			<li>&raquo; <a href="#">Installation</a></li>
+			<li>&raquo; <a href="#">DVD Install Software</a></li>
+			<li>&raquo; <a href="#">Another Category</a></li>
+			<li>&raquo; <a href="#">Yet Another Category</a></li>
+			<li>&raquo; <a href="#">Even Another Category</a></li>
+			<li>&raquo; Software Corrupt</li>
+		</ul>
+	</div>
+	 <br style="clear:all;">
+	<span id="debug"></span>
+</body>
+</html>
